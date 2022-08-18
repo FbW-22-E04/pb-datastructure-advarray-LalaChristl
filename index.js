@@ -47,7 +47,7 @@ console.log("-----------------FOUR----------------");
 
 const friends = ["rika", "jenna", "bleda", "oliver", "itamar"];
 function filterItems(arr, letter) {
-  const items = arr.filter((item) => item.includes(letter));
+  const items = arr.filter((item) => item.includes(letter)).map(item => item[0].toUpperCase() + item.slice(1));
   return items;
 }
 console.log(filterItems(friends, "ka")); // ["Rika"];
